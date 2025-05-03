@@ -1,10 +1,8 @@
 using Business.ServiceRepository;
 using Data.RepositoryData;
 using Entity.DTOs;
-using Microsoft.AspNetCore.Components;
-using Microsoft.AspNetCore.Http.HttpResults;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 using RouteAttribute = Microsoft.AspNetCore.Mvc.RouteAttribute;
 
 namespace Web1.Controller;
@@ -13,6 +11,7 @@ namespace Web1.Controller;
 [Route("api/[controller]")]
 [ApiController]
 [Produces("application/json")]
+[Authorize]
 public class PersonController : ControllerBase
  
 {
@@ -48,7 +47,7 @@ public class PersonController : ControllerBase
             var person = await _personBusiness.GetAllById(id);
             return Ok(person);
         }catch(Exception ex){
-            _logger.LogWarning(ex,"Error al obtener la persona por id",id);
+            _logger.LogWarning(ex,"Error al obtener la persona por id");
             return BadRequest(new {message = ex.Message});
         }
     }

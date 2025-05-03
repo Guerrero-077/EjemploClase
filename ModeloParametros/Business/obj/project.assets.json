@@ -3456,8 +3456,8 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "projectReferences": {
-            "c:\\Users\\braya\\Desktop\\Trabajos-2025\\ModeloParametros\\Data\\Data.csproj": {
-              "projectPath": "c:\\Users\\braya\\Desktop\\Trabajos-2025\\ModeloParametros\\Data\\Data.csproj"
+            "C:\\Users\\braya\\Desktop\\Trabajos-2025\\ModeloParametros\\Data\\Data.csproj": {
+              "projectPath": "C:\\Users\\braya\\Desktop\\Trabajos-2025\\ModeloParametros\\Data\\Data.csproj"
             }
           }
         }

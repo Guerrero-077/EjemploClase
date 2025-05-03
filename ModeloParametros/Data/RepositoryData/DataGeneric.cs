@@ -23,9 +23,9 @@ public class DataGeneric<T> where T : class
     }
 
     public async Task<T> AddAsync(T Entity){
-         await _context.Set<T>().AddAsync(Entity);
-            await _context.SaveChangesAsync();
-            return Entity;
+        await _context.Set<T>().AddAsync(Entity);
+        await _context.SaveChangesAsync();
+        return Entity;
     }
 
     public async Task<bool> UpdateAsync(T Entity){
